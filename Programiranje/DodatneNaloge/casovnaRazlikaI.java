@@ -6,6 +6,6 @@ public class casovnaRazlikaI {
 		int m1 = s.nextInt();
 		int h2 = s.nextInt();
 		int m2 = s.nextInt();
-		
+		System.out.println((m2 - m1 < 0 ? m2 - m1: m2 - m1) + 60 * (h2 - h1));
 	}
 }
