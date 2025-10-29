@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class trihotomija {
+public class Trihotomija {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int v1 = s.nextInt();

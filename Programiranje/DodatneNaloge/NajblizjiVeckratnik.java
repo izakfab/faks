@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class najblizjiVeckratnik {
+public class NajblizjiVeckratnik {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		int osnova = s.nextInt();
