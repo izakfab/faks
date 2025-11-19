@@ -6,6 +6,7 @@ public class Starost {
         Scanner s = new Scanner(System.in);
         System.out.print("Vnesi svojo starost: ");
         int starost = s.nextInt();
+		s.close();
         System.out.println(
             "Tvoje leto rojstva je " +
                 (2025 - starost) +
