@@ -13,7 +13,7 @@ public class DN05_63250060 {
 		for (int i = 0; i < stevilo; i++) {
 			int oblika = s.nextInt();
 			int lokacija = s.nextInt() + 1000;
-			
+
 			int zamik = calcShift(stolpci, lokacija, oblika);
 			vstavi(stolpci, lokacija, zamik, oblika);
 		}
