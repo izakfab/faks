@@ -18,7 +18,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="DN3"/>
+  <main name="Main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -53,153 +53,6 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="DN3">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="DN3"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(100,60)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-      <a name="label" val="x2"/>
-    </comp>
-    <comp lib="0" loc="(160,60)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-      <a name="label" val="x3"/>
-    </comp>
-    <comp lib="0" loc="(220,60)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-      <a name="label" val="x4"/>
-    </comp>
-    <comp lib="0" loc="(40,60)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-      <a name="label" val="x1"/>
-    </comp>
-    <comp lib="0" loc="(910,440)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="f"/>
-      <a name="type" val="output"/>
-    </comp>
-    <comp lib="1" loc="(130,110)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(190,110)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(250,110)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(340,140)" name="XOR Gate"/>
-    <comp lib="1" loc="(340,600)" name="OR Gate"/>
-    <comp lib="1" loc="(370,140)" name="NOT Gate"/>
-    <comp lib="1" loc="(580,270)" name="OR Gate"/>
-    <comp lib="1" loc="(590,630)" name="AND Gate"/>
-    <comp lib="1" loc="(670,370)" name="OR Gate"/>
-    <comp lib="1" loc="(70,110)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(760,250)" name="AND Gate"/>
-    <comp lib="1" loc="(880,440)" name="OR Gate"/>
-    <comp loc="(500,200)" name="Symmetry_4b_0"/>
-    <comp loc="(500,330)" name="Symmetry_4b_1"/>
-    <comp loc="(500,460)" name="Symmetry_4b_1"/>
-    <comp loc="(500,660)" name="Symmetry_4b_2"/>
-    <wire from="(100,220)" to="(100,350)"/>
-    <wire from="(100,220)" to="(280,220)"/>
-    <wire from="(100,350)" to="(100,480)"/>
-    <wire from="(100,350)" to="(280,350)"/>
-    <wire from="(100,480)" to="(100,830)"/>
-    <wire from="(100,480)" to="(280,480)"/>
-    <wire from="(100,60)" to="(100,70)"/>
-    <wire from="(100,70)" to="(100,220)"/>
-    <wire from="(100,70)" to="(130,70)"/>
-    <wire from="(130,110)" to="(130,680)"/>
-    <wire from="(130,680)" to="(130,830)"/>
-    <wire from="(130,680)" to="(280,680)"/>
-    <wire from="(130,70)" to="(130,80)"/>
-    <wire from="(160,240)" to="(160,370)"/>
-    <wire from="(160,240)" to="(280,240)"/>
-    <wire from="(160,370)" to="(160,700)"/>
-    <wire from="(160,370)" to="(280,370)"/>
-    <wire from="(160,60)" to="(160,70)"/>
-    <wire from="(160,70)" to="(160,240)"/>
-    <wire from="(160,70)" to="(190,70)"/>
-    <wire from="(160,700)" to="(160,830)"/>
-    <wire from="(160,700)" to="(280,700)"/>
-    <wire from="(190,110)" to="(190,500)"/>
-    <wire from="(190,500)" to="(190,620)"/>
-    <wire from="(190,500)" to="(280,500)"/>
-    <wire from="(190,620)" to="(190,830)"/>
-    <wire from="(190,620)" to="(290,620)"/>
-    <wire from="(190,70)" to="(190,80)"/>
-    <wire from="(220,160)" to="(220,260)"/>
-    <wire from="(220,160)" to="(280,160)"/>
-    <wire from="(220,260)" to="(220,390)"/>
-    <wire from="(220,260)" to="(280,260)"/>
-    <wire from="(220,390)" to="(220,520)"/>
-    <wire from="(220,390)" to="(280,390)"/>
-    <wire from="(220,520)" to="(220,720)"/>
-    <wire from="(220,520)" to="(280,520)"/>
-    <wire from="(220,60)" to="(220,70)"/>
-    <wire from="(220,70)" to="(220,160)"/>
-    <wire from="(220,70)" to="(250,70)"/>
-    <wire from="(220,720)" to="(220,830)"/>
-    <wire from="(220,720)" to="(280,720)"/>
-    <wire from="(250,110)" to="(250,830)"/>
-    <wire from="(250,70)" to="(250,80)"/>
-    <wire from="(340,600)" to="(520,600)"/>
-    <wire from="(370,140)" to="(690,140)"/>
-    <wire from="(40,120)" to="(280,120)"/>
-    <wire from="(40,120)" to="(40,200)"/>
-    <wire from="(40,200)" to="(280,200)"/>
-    <wire from="(40,200)" to="(40,330)"/>
-    <wire from="(40,330)" to="(280,330)"/>
-    <wire from="(40,330)" to="(40,830)"/>
-    <wire from="(40,60)" to="(40,70)"/>
-    <wire from="(40,70)" to="(40,120)"/>
-    <wire from="(40,70)" to="(70,70)"/>
-    <wire from="(500,200)" to="(520,200)"/>
-    <wire from="(500,330)" to="(520,330)"/>
-    <wire from="(500,460)" to="(600,460)"/>
-    <wire from="(500,660)" to="(520,660)"/>
-    <wire from="(520,200)" to="(520,250)"/>
-    <wire from="(520,250)" to="(530,250)"/>
-    <wire from="(520,290)" to="(520,330)"/>
-    <wire from="(520,290)" to="(530,290)"/>
-    <wire from="(520,600)" to="(520,610)"/>
-    <wire from="(520,610)" to="(540,610)"/>
-    <wire from="(520,650)" to="(520,660)"/>
-    <wire from="(520,650)" to="(540,650)"/>
-    <wire from="(580,270)" to="(600,270)"/>
-    <wire from="(590,630)" to="(800,630)"/>
-    <wire from="(600,270)" to="(600,350)"/>
-    <wire from="(600,350)" to="(620,350)"/>
-    <wire from="(600,390)" to="(600,460)"/>
-    <wire from="(600,390)" to="(620,390)"/>
-    <wire from="(670,370)" to="(690,370)"/>
-    <wire from="(690,140)" to="(690,230)"/>
-    <wire from="(690,230)" to="(710,230)"/>
-    <wire from="(690,270)" to="(690,370)"/>
-    <wire from="(690,270)" to="(710,270)"/>
-    <wire from="(70,110)" to="(70,460)"/>
-    <wire from="(70,460)" to="(280,460)"/>
-    <wire from="(70,460)" to="(70,580)"/>
-    <wire from="(70,580)" to="(290,580)"/>
-    <wire from="(70,580)" to="(70,660)"/>
-    <wire from="(70,660)" to="(280,660)"/>
-    <wire from="(70,660)" to="(70,830)"/>
-    <wire from="(70,70)" to="(70,80)"/>
-    <wire from="(760,250)" to="(800,250)"/>
-    <wire from="(800,250)" to="(800,420)"/>
-    <wire from="(800,420)" to="(830,420)"/>
-    <wire from="(800,460)" to="(800,630)"/>
-    <wire from="(800,460)" to="(830,460)"/>
-    <wire from="(880,440)" to="(910,440)"/>
-  </circuit>
   <circuit name="Symmetry_4b_0">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="Symmetry_4b_0"/>
@@ -483,5 +336,11 @@
     <wire from="(230,90)" to="(230,160)"/>
     <wire from="(50,160)" to="(120,160)"/>
     <wire from="(50,90)" to="(50,160)"/>
+  </circuit>
+  <circuit name="Main">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
   </circuit>
 </project>
