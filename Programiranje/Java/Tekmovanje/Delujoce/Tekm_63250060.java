@@ -4,106 +4,105 @@ import java.math.BigInteger;
 
 public class Tekm_63250060 {
 
-	public static void main(String[] args) {
+	public static void main() {
 
 		Scanner s = new Scanner(System.in);
-		byte tip = s.nextByte();
-		byte n = s.nextByte();
-		byte k = s.nextByte();
+		int t = s.nextInt();
+		int n = s.nextInt();
+		int k = s.nextInt();
 		BigInteger m = new BigInteger(s.next());
-		byte[] result = tip == 1 ? kombinacije(n, k, m) : tip == 2 ? kombinacijeSPonavljanjem(n, k, m) : tip == 3 ? variacije(n, k, m) : variacijeSPonavljanjem(n, k, m);
+		int[] r = t == 1 ? k(n, k, m) : t == 2 ? kP(n, k, m) : t == 3 ? v(n, k, m) : vP(n, k, m);
 		s.close();
-		System.out.print("[" + result[0]);
-		for (int i = 1; i < result.length; i++) {
-			System.out.print(", " + result[i]);
+		System.out.print("[" + r[0]);
+		for (int i = 1; i < r.length; i++) {
+			System.out.print(", " + r[i]);
 		}
 		System.out.println("]");
 	}
 
 
-	public static BigInteger fakulteta(int x) {
+	public static BigInteger f(int x) {
 		if (x == 0) return BigInteger.ONE;
-		BigInteger result = BigInteger.ONE;
+		BigInteger r = BigInteger.ONE;
 		for (int i = 2; i <= x; i++)
-		    result = result.multiply(BigInteger.valueOf(i));
-		return result;
+		    r = r.multiply(BigInteger.valueOf(i));
+		return r;
 	}
 
-	public static BigInteger stKombinacij(byte n, byte k) {
-		return fakulteta(n).divide(fakulteta(k).multiply(fakulteta((byte) (n - k))));
+	public static BigInteger sK(int n, int k) {
+		return f(n).divide(f(k).multiply(f(n - k)));
 	}
 
-	public static BigInteger stKombinacijSPonavljanjem(byte n, byte k) {
-		return fakulteta(n + k - 1).divide(fakulteta(k).multiply(fakulteta((byte) (n - 1))));
+	public static BigInteger sKP(int n, int k) {
+		return f(n + k - 1).divide(f(k).multiply(f(n - 1)));
 	}
 
 
-	public static byte[] kombinacije(byte n, byte k, BigInteger m) {
-		BigInteger vsota = BigInteger.ZERO;
-		byte[] result = new byte[k];
-		for (byte i = 0; i < k; i++) {
-			byte j;
+	public static int[] k(int n, int k, BigInteger m) {
+		BigInteger v = BigInteger.ZERO;
+		int[] r = new int[k];
+		for (int i = 0; i < k; i++) {
+			int j;
 			if (i == 0)
 				j = 1;
 			else
-				j = (byte) (result[i - 1] + 1);
-			while (vsota.add(stKombinacij((byte) (n - j), (byte) (k - i - 1))).compareTo(m) < 0) {
-    			vsota = vsota.add(stKombinacij((byte) (n - j), (byte) (k - i - 1)));
+				j = r[i - 1] + 1;
+			while (v.add(sK(n - j, k - i - 1)).compareTo(m) < 0) {
+    			v = v.add(sK(n - j, k - i - 1));
 				j++;
 			}
-			result[i] = j;
+			r[i] = j;
 		}
-		return result;
+		return r;
 	}
 
-	public static byte[] kombinacijeSPonavljanjem(byte n, byte k, BigInteger m) {
-		BigInteger vsota = BigInteger.ZERO;
-		byte[] result = new byte[k];
-		for (byte i = 0; i < k; i++) {
-			byte j;
+	public static int[] kP(int n, int k, BigInteger m) {
+		BigInteger v = BigInteger.ZERO;
+		int[] r = new int[k];
+		for (int i = 0; i < k; i++) {
+			int j;
 			if (i == 0)
 				j = 1;
 			else
-				j = (byte) (result[i - 1]);
-			while (vsota.add(stKombinacijSPonavljanjem((byte) (n - j + 1), (byte) (k - i - 1))).compareTo(m) < 0) {
-				vsota = vsota.add(stKombinacijSPonavljanjem((byte) (n - j + 1), (byte) (k - i - 1)));
+				j = r[i - 1];
+			while (v.add(sKP(n - j + 1, k - i - 1)).compareTo(m) < 0) {
+				v = v.add(sKP(n - j + 1, k - i - 1));
 				j++;
 			}
-			result[i] = j;
+			r[i] = j;
 		}
-		return result;
+		return r;
 	}
 
-	public static byte[] variacije(byte n, byte k, BigInteger m) {
-		byte[] result = new byte[k];
-		BigInteger mod = m;
-		for (byte i = 0; i < k; i++) {
-			BigInteger[] deljenjeInMod = mod.divideAndRemainder(fakulteta(n - i - 1).divide(fakulteta(n - k)));
-			deljenjeInMod[0] = deljenjeInMod[1].compareTo(BigInteger.ZERO) == 0 ? deljenjeInMod[0] : deljenjeInMod[0].add(BigInteger.ONE);
-			deljenjeInMod[1] = deljenjeInMod[1].compareTo(BigInteger.ZERO) == 0 ? fakulteta(n - i - 1).divide(fakulteta(n - k)) : deljenjeInMod[1];
-			result[i] = deljenjeInMod[0].byteValue();
-			mod = deljenjeInMod[1];
+	public static int[] v(int n, int k, BigInteger m) {
+		int[] r = new int[k];
+		BigInteger M = m;
+		for (int i = 0; i < k; i++) {
+			BigInteger[] d = M.divideAndRemainder(f(n - i - 1).divide(f(n - k)));
+			d[0] = d[1].signum() == 0 ? d[0] : d[0].add(BigInteger.ONE);
+			d[1] = d[1].signum() == 0 ? f(n - i - 1).divide(f(n - k)) : d[1];
+			r[i] = d[0].intValue();
+			M = d[1];
 		}
 
 		for (int i = 0; i < k; i++) {
-			byte[] sorted = Arrays.copyOf(result, i);
-			Arrays.sort(sorted);
+			int[] s = Arrays.copyOf(r, i);
+			Arrays.sort(s);
 			for (int j = 0; j < i; j++) {
-				result[i] = result[i] >= sorted[j] ? (byte) (result[i] + 1) : result[i];
+				r[i] = r[i] >= s[j] ? r[i] + 1 : r[i];
 			}
-
 		}
-		return result;
+		return r;
 	}
 
-	public static byte[] variacijeSPonavljanjem(byte n, byte k, BigInteger m) {
-		byte[] result = new byte[k];
-		for (byte i = 1; i <= k; i++) {
-			BigInteger[] deljenje = m.divideAndRemainder(BigInteger.valueOf(n).pow(k -i));
-			BigInteger ceil = deljenje[1].compareTo(BigInteger.ZERO) == 0 ? deljenje[0] : deljenje[0].add(BigInteger.ONE);
-			byte moduloZn = ceil.mod(BigInteger.valueOf(n)).byteValue();
-			result[i - 1] = moduloZn == 0 ? n : moduloZn;
+	public static int[] vP(int n, int k, BigInteger m) {
+		int[] r = new int[k];
+		for (int i = 1; i <= k; i++) {
+			BigInteger[] d = m.divideAndRemainder(BigInteger.valueOf(n).pow(k -i));
+			BigInteger c = d[1].signum() == 0 ? d[0] : d[0].add(BigInteger.ONE);
+			int M = c.mod(BigInteger.valueOf(n)).intValue();
+			r[i - 1] = M == 0 ? n : M;
 		}
-		return result;
+		return r;
 	}
 }
