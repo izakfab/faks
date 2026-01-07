@@ -8,3 +8,8 @@ Avg: 60 ms
 Errors: 0
 Total: 8 h 23 min 13 s 530 ms for 500000 tests
 
+Max: 83 ms
+Avg: 57 ms
+Errors: 0
+Total: 0 h 9 min 30 s 692 ms for 10000 tests
+
