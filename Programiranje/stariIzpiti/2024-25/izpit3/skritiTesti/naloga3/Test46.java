@@ -1,0 +1,112 @@
+
+import java.util.*;
+
+public class Test46 {
+
+    private static class NovTip1 extends Tretja.Oglat implements Tretja.DvaD {
+        public NovTip1(int[] podatki) {
+            super(podatki);
+        }
+        @Override
+        public String toString() {
+            return String.format("NovTip1(%s)", Arrays.toString(this.stranice));
+        }
+    }
+
+    public static void main(String[] args) {
+        Tretja.Oglat[] oglati = new Tretja.Oglat[]{
+            new Tretja.Pravokotnik(183, 921),
+            new NovTip1(new int[]{245, 10, 840}),
+            new NovTip1(new int[]{186, 753, 676, 368}),
+            new NovTip1(new int[]{247, 323, 604}),
+            new Tretja.Kvader(145, 145, 280),
+            new Tretja.Kvader(98, 3, 637),
+            new Tretja.Kvader(341, 497, 520),
+            new Tretja.Kvader(910, 923, 187),
+            new NovTip1(new int[]{988, 723, 525, 749, 417, 709, 780, 572}),
+            new Tretja.Kvader(743, 296, 793),
+            new Tretja.Pravokotnik(388, 509),
+            new Tretja.Kvader(407, 547, 567),
+            new Tretja.Pravokotnik(197, 930),
+            new Tretja.Pravokotnik(701, 414),
+            new Tretja.Kvader(228, 726, 177),
+            new Tretja.Pravokotnik(179, 594),
+            new Tretja.Kvader(76, 74, 944),
+            new Tretja.Kvader(797, 867, 155),
+            new NovTip1(new int[]{663, 20, 616}),
+            new NovTip1(new int[]{197, 612, 578, 45, 517, 447, 760}),
+            new Tretja.Kvader(137, 757, 96),
+            new Tretja.Kvader(382, 845, 269),
+            new Tretja.Pravokotnik(842, 282),
+            new Tretja.Pravokotnik(892, 851),
+            new NovTip1(new int[]{445, 236}),
+            new Tretja.Kvader(470, 796, 375),
+            new Tretja.Kvader(590, 656, 278),
+            new Tretja.Pravokotnik(488, 465),
+            new NovTip1(new int[]{418, 663, 3, 396, 481, 183}),
+            new Tretja.Kvader(507, 296, 830),
+            new Tretja.Pravokotnik(976, 215),
+            new Tretja.Pravokotnik(643, 118),
+            new Tretja.Kvader(212, 401, 670),
+            new Tretja.Pravokotnik(990, 87),
+            new Tretja.Pravokotnik(997, 928),
+            new Tretja.Kvader(977, 201, 429),
+            new Tretja.Pravokotnik(503, 697),
+            new Tretja.Kvader(380, 865, 459),
+            new NovTip1(new int[]{271, 726, 198, 111, 396, 606, 757}),
+            new Tretja.Kvader(565, 144, 664),
+            new Tretja.Pravokotnik(611, 404),
+            new Tretja.Pravokotnik(157, 1),
+            new Tretja.Pravokotnik(140, 829),
+            new NovTip1(new int[]{185, 489, 851, 378, 811, 744}),
+            new NovTip1(new int[]{483, 529, 72, 210, 526, 718, 573, 333, 310}),
+            new Tretja.Kvader(562, 552, 337),
+            new Tretja.Pravokotnik(681, 779),
+            new Tretja.Kvader(618, 496, 674),
+            new NovTip1(new int[]{557, 575, 661, 120}),
+            new Tretja.Kvader(713, 166, 540),
+            new Tretja.Pravokotnik(212, 921),
+            new Tretja.Pravokotnik(841, 626),
+            new Tretja.Pravokotnik(735, 984),
+            new Tretja.Pravokotnik(196, 417),
+            new NovTip1(new int[]{470, 891, 257, 324, 324, 778}),
+            new Tretja.Pravokotnik(49, 940),
+            new Tretja.Pravokotnik(837, 461),
+            new Tretja.Pravokotnik(542, 588),
+            new Tretja.Kvader(894, 501, 682),
+            new NovTip1(new int[]{473, 70, 304, 213, 542}),
+            new Tretja.Kvader(135, 714, 762),
+            new Tretja.Pravokotnik(952, 944),
+            new Tretja.Kvader(475, 454, 121),
+            new NovTip1(new int[]{165, 924, 107}),
+            new Tretja.Kvader(605, 851, 876),
+            new Tretja.Pravokotnik(96, 923),
+            new Tretja.Pravokotnik(771, 333),
+            new Tretja.Pravokotnik(172, 489),
+            new Tretja.Kvader(489, 593, 106),
+            new Tretja.Kvader(367, 187, 286),
+            new Tretja.Pravokotnik(284, 7),
+            new NovTip1(new int[]{285, 992, 984, 413, 330, 243, 764}),
+            new NovTip1(new int[]{354, 419, 669, 235, 929, 196, 100, 104, 864, 244}),
+            new Tretja.Pravokotnik(686, 450),
+            new Tretja.Pravokotnik(294, 201),
+            new NovTip1(new int[]{445, 273}),
+            new NovTip1(new int[]{203, 290, 658, 260, 596, 317}),
+            new Tretja.Pravokotnik(693, 616),
+            new Tretja.Pravokotnik(979, 959),
+            new Tretja.Pravokotnik(359, 354),
+            new Tretja.Pravokotnik(859, 307),
+            new NovTip1(new int[]{477, 501, 63, 180, 15, 433, 34, 667}),
+            new Tretja.Pravokotnik(926, 585),
+            new Tretja.Pravokotnik(998, 698),
+            new Tretja.Kvader(549, 723, 712),
+            new Tretja.Pravokotnik(439, 722),
+            new NovTip1(new int[]{894, 269, 632, 111, 36}),
+            new Tretja.Pravokotnik(103, 835),
+            new Tretja.Kvader(623, 784, 861),
+            new Tretja.Pravokotnik(607, 236),
+            new Tretja.Pravokotnik(65, 238),
+        };
+        System.out.println(Tretja.najRazlika(oglati));
+    }
+}

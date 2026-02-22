@@ -15,7 +15,7 @@ def gen(t, base, k):
 
 def main():
     count = 1
-    for n in range(1, 8):
+    for n in range(4, 6):
         for i in range(1, 5):
             for j in range(1, n + 1):
                 base = list(range(1, max(n + 1, 6)))
