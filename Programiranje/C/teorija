@@ -1,0 +1,11 @@
+Struktura C datoteke
+
+- programska koda v Cju
+- belo besedilo in komentarji (//, /*, */)
+- ukazi predprocesorja (#..., izvedejo se še pred prevajalnikom)
+
+imamo oznake
+
+oznaka:
+
+in lahko nanjo skačemo z ukazom goto oznaka
