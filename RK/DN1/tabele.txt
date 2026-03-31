@@ -1,0 +1,48 @@
+PC1:
+default via 10.1.0.1 dev eth0
+10.1.0.0/16 dev eth0 scope link  src 10.1.0.2
+
+2001:db8:e:1::/64 dev eth0  metric 256
+fe80::/64 dev eth0  metric 256
+default via 2001:db8:e:1::1 dev eth0  metric 1024
+
+
+R1:
+default via 10.0.0.1 dev eth0
+10.0.0.0/24 dev eth0  proto kernel  scope link  src 10.0.0.2
+10.1.0.0/16 dev eth1  proto kernel  scope link  src 10.1.0.1
+127.0.0.0/8 dev lo  proto kernel  scope link  src 127.0.0.1
+
+2001:db8:0:f::/64 dev eth0  proto kernel  metric 256
+2001:db8:e:1::/64 dev eth1  proto kernel  metric 256
+fe80::/64 dev eth1  proto kernel  metric 256
+fe80::/64 dev eth0  proto kernel  metric 256
+default via 2001:db8:0:f::1 dev eth0  metric 1024
+
+
+R2:
+10.0.0.0/24 dev eth1  proto kernel  scope link  src 10.0.0.1
+10.1.0.0/16 via 10.0.0.2 dev eth1
+127.0.0.0/8 dev lo  proto kernel  scope link  src 127.0.0.1
+172.16.0.0/24 via 192.168.6.2 dev eth2
+192.168.6.0/24 dev eth2  proto kernel  scope link  src 192.168.6.1
+
+2001:db8:0:f::/64 dev eth1  proto kernel  metric 256
+2001:db8:0:ef::/64 via 2001:db8:ef:6::2 dev eth2  metric 1024
+2001:db8:e:1::/64 via 2001:db8:0:f::2 dev eth1  metric 1024
+2001:db8:ef:6::/64 dev eth2  proto kernel  metric 256
+fe80::/64 dev eth2  proto kernel  metric 256
+fe80::/64 dev eth1  proto kernel  metric 256
+
+R3:
+10.0.0.0/24 dev eth1  proto kernel  scope link  src 10.0.0.1
+10.1.0.0/16 via 10.0.0.2 dev eth1
+127.0.0.0/8 dev lo  proto kernel  scope link  src 127.0.0.1
+172.16.0.0/24 via 192.168.6.2 dev eth2
+192.168.6.0/24 dev eth2  proto kernel  scope link
+
+2001:db8:0:ef::/64 dev eth1  proto kernel  metric 256
+2001:db8:ef:6::/64 dev eth0  proto kernel  metric 256
+fe80::/64 dev eth1  proto kernel  metric 256
+fe80::/64 dev eth0  proto kernel  metric 256
+default via 2001:db8:ef:6::1 dev eth0  metric 1024
