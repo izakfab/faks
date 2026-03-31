@@ -1,0 +1,766 @@
+  ---
+  Podroben povzetek — Osnove informacijskih sistemov (OIS)
+
+  ---
+  P1 — Uvod v informacijske sisteme
+
+  Kaj je informacijski sistem?
+
+  - IS = kombinacija ljudi, strojne opreme (HW), programske opreme (SW), omrežij, podatkov in postopkov,
+   ki zbirajo, obdelujejo, shranjujejo in distribuirajo informacije za podporo odločanju in nadzoru v
+  organizaciji.
+  - Podatek = surovo dejstvo (npr. 37°C), Informacija = obdelani podatki z menom (npr. "telesna
+  temperatura pacienta je 37°C"), Znanje = razumevanje in kontekst.
+
+  Komponente IS
+
+  1. Strojna oprema (Hardware) — fizični računalniški deli
+  2. Programska oprema (Software) — operacijski sistemi, aplikacije
+  3. Podatki (Data) — surova dejstva za obdelavo
+  4. Ljudje (People) — uporabniki, razvijalci, menedžerji
+  5. Postopki (Procedures) — pravila in procesi
+
+  Vrste IS glede na raven v organizaciji
+
+  ┌──────────────┬──────────┬────────────────────────────┐
+  │    Raven     │ Vrsta IS │           Namen            │
+  ├──────────────┼──────────┼────────────────────────────┤
+  │ Operativna   │ TPS      │ Dnevne transakcije         │
+  ├──────────────┼──────────┼────────────────────────────┤
+  │ Upravljavska │ MIS, DSS │ Nadzor, analiza, odločanje │
+  ├──────────────┼──────────┼────────────────────────────┤
+  │ Strateška    │ ESS      │ Dolgoročno načrtovanje     │
+  └──────────────┴──────────┴────────────────────────────┘
+
+  Vloge IS v organizaciji
+
+  - Podpora operacijam — avtomatizacija rutinskih nalog
+  - Podpora odločanju — analize, poročila, modeli
+  - Podpora sodelovanju — komunikacija, koordinacija (e-pošta, videokonference)
+  - Strateška prednost — diferenciacija, znižanje stroškov, novi trgi
+
+  Digitalna transformacija
+
+  - Preoblikovanje poslovnih modelov s pomočjo digitalnih tehnologij
+  - Primer: Amazon (maloprodaja → oblak), Netflix (DVD → streaming)
+
+  ---
+  P2 — Podatki, informacije, znanje in poslovne odločitve
+
+  Hierarhija podatkov
+
+  - bit → bajt → polje (field) → zapis (record) → datoteka (file) → baza podatkov
+
+  Podatkovni silosi (information silos)
+
+  - Vsak oddelek ima svojo ločeno bazo → podatki so neusklajeni, podvojeni
+  - Rešitev: integracija podatkov (npr. ERP sistemi)
+
+  Upravljanje znanja (Knowledge Management)
+
+  - Eksplicitno znanje — zapisano, prenosljivo (dokumenti, priročniki)
+  - Tacitno znanje — izkušnje, intuicija (težko prenosljivo)
+  - Sistemi za upravljanje znanja (KMS): wiki, baze znanja, ekspertni sistemi
+
+  Poslovna analitika (Business Analytics)
+
+  - Opisna analitika (Descriptive) — kaj se je zgodilo? (poročila, dashboardi)
+  - Napovedna analitika (Predictive) — kaj se bo zgodilo? (statistični modeli, ML)
+  - Predpisna analitika (Prescriptive) — kaj storiti? (optimizacijski modeli)
+
+  Nadzorne plošče (Dashboards)
+
+  - Vizualizacija KPI-jev v realnem času
+  - Namenjene upravljavski in strateški ravni
+
+  ---
+  P3 — Organizacije, procesi in IS
+
+  Organizacije
+
+  - Organizacija = formalna struktura z odgovornostmi, hierarhijo in cilji
+  - Vrste struktur: funkcijska, divizijska, matrična, mrežna
+  - Organizacijska kultura vpliva na sprejem IS
+  - Organizacijska sprememba je pogost izziv pri uvajanju IS
+
+  Poslovni procesi
+
+  - Proces = zaporedje aktivnosti, ki transformirajo vhode v izhode
+  - Projekt ≠ Proces: projekt je enkraten, začasni, s ciljem; proces je ponavljajoč
+  - Primeri poslovnih procesov: naročilo → dostava, zaposlovanje, razvoj produkta
+
+  IS in konkurenčna prednost
+
+  - Porterjev model 5 sil:
+    a. Rivalstvo med obstoječimi podjetji
+    b. Grožnja novih udeležencev
+    c. Grožnja nadomestnih produktov
+    d. Pogajalska moč kupcev
+    e. Pogajalska moč dobaviteljev
+  - IS lahko zmanjša moč vsake od sil (npr. CRM zmanjša moč kupcev, SCM moč dobaviteljev)
+
+  Poslovni pritiski
+
+  - Tržni pritiski: globalizacija, spremenljivi kupci, e-commerce
+  - Tehnološki pritiski: inovacije, obstoletnost sistemov, IT intelektualne lastnine
+  - Pritiski družbe/zakonodaje: varnost, etika, GDPR, regulativa
+
+  Vpliv interneta na konkurenco
+
+  - Zmanjša vstopne ovire → več konkurence
+  - Poveča transparentnost cen → pritisk na marže
+  - Omogoča globalni doseg malim podjetjem
+  - Digitalna transformacija = temeljita sprememba poslovnih modelov z digitalno tehnologijo
+
+  ---
+  P4 — Vrste informacijskih sistemov
+
+  Transakcijski procesni sistemi (TPS)
+
+  - Podpirajo dnevne operativne transakcije (naročila, plačila, rezervacije)
+  - Hitri, zanesljivi, visoka zmogljivost
+  - Primer: blagajniški sistemi, bancni sistemi
+
+  Funkcionalni IS (FAIS)
+
+  - IS za posamezne poslovne funkcije:
+    - Računovodstvo: splošna knjiga, terjatve, obveznosti
+    - Finance: proračun, naložbe, napovedi
+    - Marketing: analiza trga, CRM
+    - Proizvodnja: načrtovanje, kontrola kakovosti
+    - Kadrovanje: evidence zaposlenih, plače
+
+  Sistemi za načrtovanje virov podjetja (ERP)
+
+  - Integriran IS, ki pokriva vse poslovne funkcije
+  - Ena skupna baza podatkov → ni silosov
+  - Primeri: SAP, Oracle, Microsoft Dynamics
+  - Prednosti: integracija, enotni podatki, standardizacija procesov
+  - Izzivi: draga implementacija, organizacijske spremembe, prilagajanje
+
+  Upravljanje oskrbovalne verige (SCM)
+
+  - Koordinacija med dobavitelji, producenti, distributerji in kupci
+  - Cilj: zmanjšanje zalog, hitrejša dostava, nižji stroški
+  - Efekt biča (bullwhip effect): majhna nihanja povpraševanja → velika nihanja zalog navzgor po verigi
+
+  Upravljanje odnosov s strankami (CRM)
+
+  - Zbiranje in analiza podatkov o strankah
+  - Operativni CRM: avtomatizacija prodaje, marketinga, servisa
+  - Analitični CRM: analiza nakupnih vzorcev, vrednosti stranke (CLV)
+  - Primer: Salesforce
+
+  Podporne sistemi odločanju (DSS)
+
+  - Podpirajo nestrukturirane in polstrukturirane odločitve
+  - Vključujejo modele, podatke in vmesnik
+  - Primer: napovedi prodaje, analiza scenarijev
+
+  Sistemi za izvršno podporo (ESS)
+
+  - Za top management — strateška raven
+  - Agregirani podatki, dashboardi, trendi
+  - Zunanja + notranja perspektiva
+
+  Centraliziran vs. decentraliziran IT
+
+  ┌─────────────────┬──────────────────────────┬─────────────────┐
+  │                 │      Centraliziran       │ Decentraliziran │
+  ├─────────────────┼──────────────────────────┼─────────────────┤
+  │ Nadzor          │ Visok                    │ Nizek           │
+  ├─────────────────┼──────────────────────────┼─────────────────┤
+  │ Stroški         │ Nižji (ekonomija obsega) │ Višji           │
+  ├─────────────────┼──────────────────────────┼─────────────────┤
+  │ Prilagodljivost │ Nižja                    │ Višja           │
+  ├─────────────────┼──────────────────────────┼─────────────────┤
+  │ Varnost         │ Lažja                    │ Težja           │
+  └─────────────────┴──────────────────────────┴─────────────────┘
+
+  Problem informacijskih silosov
+
+  - Vsak oddelek vzdržuje svojo bazo → podatki niso usklajeni
+  - Rešitev: ERP, skupne baze podatkov, integracija
+
+  ---
+  P5 — IS, strategija in vrednost
+
+  IS strateško načrtovanje
+
+  - IS mora biti usklajen s poslovno strategijo (strategic alignment)
+  - Koraki: analiza okolja → določitev ciljev → razvoj strategije → implementacija → nadzor
+
+  Upravičevanje naložb v IS
+
+  ┌────────────────────────────┬────────────────────────────────────────────────────────────────────┐
+  │           Metoda           │                                Opis                                │
+  ├────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ NPV (Net Present Value)    │ Sedanja vrednost prihodnih denarnih tokov; pozitiven NPV = naložba │
+  │                            │  se splača                                                         │
+  ├────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ ROI (Return on Investment) │ (Dobiček − Naložba) / Naložba × 100%                               │
+  ├────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Break-even                 │ Kdaj se naložba povrne                                             │
+  ├────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Business Case              │ Celovit dokument z analizo stroškov, koristi, tveganj in           │
+  │                            │ alternativ                                                         │
+  ├────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Točkovni model (Scoring    │ Ocenjevanje alternativ po več kriterijih z utežmi                  │
+  │ model)                     │                                                                    │
+  ├────────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Opcijski pristop           │ Pilotni projekti za preizkus pred polno implementacijo             │
+  └────────────────────────────┴────────────────────────────────────────────────────────────────────┘
+
+  Tehnični dolg (Technical Debt)
+
+  - Nakopičeni stroški zastarelih (legacy) sistemov, ki so predragi za zamenjavo
+  - Primer: Southwest Airlines — zastareli sistemi povzročili kaos med neurjem 2022
+
+  Primer: McAfee (P5, str. 42)
+
+  - Okolje: SAP ERP, 40+ poslovnih sistemov
+  - Problem: preveč sprememb → ročno testiranje prepočasno
+  - Rešitev: avtomatizirano testiranje (Worksoft Certify)
+  - Rezultat: ~2.500 ur prihranjenega časa, $200.000 prihranek
+
+  ---
+  Projektno vodenje IS
+
+  Kaj je projekt?
+
+  - Začasen — ima začetek in konec
+  - Unikaten cilj — enkratni rezultat
+  - Omejeni viri — čas, denar, ljudje
+  - Negotovost — tveganja in spremenljive zahteve
+  - Merila uspeha — definirani KPI-ji
+
+  Trojna omejitev (Triple Constraint)
+
+          Cost
+         /    \
+        /      \
+     Time ---- Scope
+  Sprememba enega parametra vpliva na ostala dva.
+
+  5 procesov projektnega vodenja
+
+  1. Iniciacija (Initiating) — definiranje projekta, projektna listina
+  2. Načrtovanje (Planning) — WBS, Gantt, PERT, proračun, tveganja
+  3. Izvajanje (Executing) — realizacija načrta
+  4. Spremljanje in nadzor (Monitoring & Controlling) — sledenje napredku, spremembe
+  5. Zaključek (Closing) — predaja, dokumentacija, analiza izkušenj
+
+  Vloge projektnega vodje
+
+  ┌──────────────┬───────────────────────────┬───────────────────────────────────┐
+  │   Področje   │          Naloga           │              Izhodi               │
+  ├──────────────┼───────────────────────────┼───────────────────────────────────┤
+  │ Integracija  │ Celostno vodenje          │ Projektna listina, plan           │
+  ├──────────────┼───────────────────────────┼───────────────────────────────────┤
+  │ Obseg        │ Kaj spada v projekt       │ WBS, izjava o obsegu              │
+  ├──────────────┼───────────────────────────┼───────────────────────────────────┤
+  │ Čas          │ Roki                      │ Gantt, PERT, kritična pot         │
+  ├──────────────┼───────────────────────────┼───────────────────────────────────┤
+  │ Stroški      │ Proračun                  │ Ocena stroškov, NPV, ROI          │
+  ├──────────────┼───────────────────────────┼───────────────────────────────────┤
+  │ Kakovost     │ Standardi                 │ Merila kakovosti                  │
+  ├──────────────┼───────────────────────────┼───────────────────────────────────┤
+  │ Kadri        │ Motivacija, dodeljevanje  │ Organizacijska shema, plan kadrov │
+  ├──────────────┼───────────────────────────┼───────────────────────────────────┤
+  │ Komunikacije │ Poročanje                 │ Statusna poročila                 │
+  ├──────────────┼───────────────────────────┼───────────────────────────────────┤
+  │ Tveganja     │ Prepoznavanje in blaženje │ Register tveganj                  │
+  └──────────────┴───────────────────────────┴───────────────────────────────────┘
+
+  Orodja projektnega vodenja
+
+  - Gantt diagram — časovnica nalog (stolpični prikaz)
+  - PERT diagram — mreža odvisnosti med nalogami, kritična pot
+
+  Zakaj projekti IS propadejo?
+
+  - Napačna ocena poslovne vrednosti
+  - Podcenjevanje organizacijskih sprememb
+  - Pomanjkanje podpore vodstva
+  - Slabo definirani cilji in obseg
+  - Pomanjkanje projektnega vodenja
+
+  Dejavniki uspeha projektov IS
+
+  ┌───────────────────┬─────────────────────────────────────────────────────────────┐
+  │       Vrsta       │                          Vprašanja                          │
+  ├───────────────────┼─────────────────────────────────────────────────────────────┤
+  │ Ljudje            │ Podpora vodstva, strokovno osebje, vodja z izkušnjami       │
+  ├───────────────────┼─────────────────────────────────────────────────────────────┤
+  │ Organizacijski    │ Usklajenost s poslovnimi cilji, vključenost deležnikov      │
+  ├───────────────────┼─────────────────────────────────────────────────────────────┤
+  │ Projekt           │ Jasen cilj, dobro definiran obseg, kompatibilnost sistemov  │
+  ├───────────────────┼─────────────────────────────────────────────────────────────┤
+  │ Projektno vodenje │ Metodologija, orodja, kontrola sprememb, merjenje kakovosti │
+  ├───────────────────┼─────────────────────────────────────────────────────────────┤
+  │ Zunanji           │ Pogodbe z zunanjimi izvajalci                               │
+  └───────────────────┴─────────────────────────────────────────────────────────────┘
+
+  ---
+  Portfelj, tveganja in strateška negotovost
+
+  Upravljanje portfelja projektov IS
+
+  - Portfelj = vsi IT projekti v organizaciji
+  - Cilj: izbirati prave projekte
+  - Stalni proces: izbor, spremljanje napredka, ustavitev neuspešnih
+
+  Kriteriji za izbiro projektov
+
+  ┌──────────────────────────────────┬──────────────────────────────────────────┐
+  │             Kriterij             │                   Opis                   │
+  ├──────────────────────────────────┼──────────────────────────────────────────┤
+  │ Prispevek k strategiji           │ Projekti, ki krepijo konkurenčni položaj │
+  ├──────────────────────────────────┼──────────────────────────────────────────┤
+  │ ROI                              │ Visok donos na naložbo                   │
+  ├──────────────────────────────────┼──────────────────────────────────────────┤
+  │ Skladnost in zmanjšanje tveganja │ Regulatorni zahteve, upravljanje tveganj │
+  └──────────────────────────────────┴──────────────────────────────────────────┘
+
+  Matrika analize portfelja IS
+
+  ┌───────────────┬───────────────────┬───────────────────┐
+  │               │  Visoko tveganje  │  Nizko tveganje   │
+  ├───────────────┼───────────────────┼───────────────────┤
+  │ Visoka korist │ Previdno preučiti │ Razvijati         │
+  ├───────────────┼───────────────────┼───────────────────┤
+  │ Nizka korist  │ Izogibati se      │ Rutinski projekti │
+  └───────────────┴───────────────────┴───────────────────┘
+
+  ---
+  Politike uporabe IS
+
+  - Dostop do interneta in spletnih strani
+  - Nadzor in sledenje
+  - Osebna uporaba IT virov
+  - Varnostne zahteve (gesla, šifriranje)
+  - Skupna raba računov (prepovedana)
+  - Zaupnost
+
+  Pravna tveganja e-pošte
+
+  ┌─────────────────────────────────┬──────────────────────────────────────┐
+  │            Tveganje             │     Namen odricanja odgovornosti     │
+  ├─────────────────────────────────┼──────────────────────────────────────┤
+  │ Kršitev zaupnosti               │ Opozorilo prejemnikom                │
+  ├─────────────────────────────────┼──────────────────────────────────────┤
+  │ Naključna kršitev               │ Zaščita za napačno dostavljeno pošto │
+  ├─────────────────────────────────┼──────────────────────────────────────┤
+  │ Prenos virusov                  │ Odgovornost preveritve               │
+  ├─────────────────────────────────┼──────────────────────────────────────┤
+  │ Implicitne pogodbene obveznosti │ Zahteva potrditev nadrejenega        │
+  ├─────────────────────────────────┼──────────────────────────────────────┤
+  │ Malomarno napačne izjave        │ Zaščita podjetja                     │
+  ├─────────────────────────────────┼──────────────────────────────────────┤
+  │ Zloraba zaposlenih              │ Zaščita podjetja pred obrekovanjem   │
+  └─────────────────────────────────┴──────────────────────────────────────┘
+
+  Obnova po nesreči in neprekinjeno poslovanje
+
+  - Disaster Recovery: postopki za obnovo IT infrastrukture po nesreči
+  - Business Continuity: zagotavljanje neprekinjenega poslovanja
+  - Ključni elementi:
+    - Varnostne kopije podatkov
+    - Nadomestna lokacija (recovery site)
+    - Postopki ponovnega zagona
+    - Testiranje načrtov
+  - Vrste nesreč: naravne (poplave, potresi), varnostne (vdori, DDoS), pandemije, okoljske nevarnosti
+
+  Tehnološki trendi (P5)
+
+  ┌──────────────────────────────┬────────────────────────────────────────────────────────────┐
+  │            Trend             │                            Opis                            │
+  ├──────────────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Avtonomne naprave            │ Roboti, avtonomna vozila, droni z umetno inteligenco       │
+  ├──────────────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Razširjena analitika         │ Algoritmično iskanje vzorcev v velikih podatkovnih zbirkah │
+  ├──────────────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Blockchain                   │ Porazdeljena elektronska knjiga, varna pred manipulacijo   │
+  ├──────────────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Digitalna etika in zasebnost │ Rastoča vrednost osebnih podatkov, regulacija              │
+  └──────────────────────────────┴────────────────────────────────────────────────────────────┘
+
+  Človeški dejavnik in kognitivne pristranskosti
+
+  - Strateško načrtovanje temelji na človeških odločitvah
+  - Na odločitve vplivajo izkušnje, intuicija, pristranskosti
+
+  ┌───────────────────┬────────────────────────────────────────────────────────────────────┐
+  │   Pristranskost   │                                Opis                                │
+  ├───────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Confirmation bias │ Iskanje informacij, ki potrjujejo obstoječe prepričanje            │
+  ├───────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Overconfidence    │ Preveč zaupanja v lastne ocene                                     │
+  ├───────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Planning fallacy  │ Podcenjevanje časa za dokončanje naloge                            │
+  ├───────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Anchoring         │ Preveč zanašanja na eno informacijo, čeprav je brezpomembna        │
+  ├───────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Availability bias │ Verjetnost dogodka presojamo po tem, kako enostavno se ga spomnimo │
+  ├───────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Hindsight bias    │ Prepričanje, da je bil dejanski izid predvidljiv                   │
+  └───────────────────┴────────────────────────────────────────────────────────────────────┘
+
+  Dogodki črnega laboda
+
+  - Nepredvideni, visoko-vplivni dogodki (npr. finančna kriza 2008, COVID-19)
+  - Strateško načrtovanje mora vključevati scenarije za black swan dogodke
+
+  ---
+  P6 — Arhitektura informacijskih sistemov
+
+  IT infrastruktura — 5 komponent
+
+  1. Strojna oprema (Hardware) — računalniki, strežniki, mobilne naprave
+  2. Programska oprema (Software) — OS, middleware, aplikacije
+  3. Upravljanje podatkov (Data Management) — DBMS, skladišča podatkov
+  4. Telekomunikacije in omrežja — LAN, WAN, internet, WiFi
+  5. Tehnološke storitve — IT podpora, varnost, oblak
+
+  Arhitektura odjemalec-strežnik (Client-Server)
+
+  - 2-nivojska (2-tier): odjemalec ↔ strežnik
+  - 3-nivojska (3-tier): odjemalec ↔ aplikacijski strežnik ↔ baza podatkov
+  - N-nivojska: splet → aplikacijski strežnik → poslovne storitve → baza
+
+  Podjetniška arhitektura (Enterprise Architecture)
+
+  - Usklajevanje IT arhitekture s poslovno strategijo
+  - Plasti: poslovna arhitektura → informacijska → aplikacijska → tehnološka
+
+  Trendi strojne opreme
+
+  1. Mobilne naprave (pametni telefoni, tablice)
+  2. Množično računalništvo — procesorska moč je postala cenena
+  3. Miniaturizacija — manjši, hitrejši, cenejši čipi
+  4. IoT — pametne naprave, senzorji, vse je povezano
+  5. Zeleno računalništvo — energetska učinkovitost
+  6. Visokozmogljivo računalništvo: kvantno računalništvo, nanotehnologija, večjedrni procesorji,
+  energetsko učinkoviti čipi
+
+  Skupni stroški lastništva (TCO — Total Cost of Ownership)
+
+  ┌──────────────────────────────┬─────────────────────────────────────────┐
+  │           Postavka           │                  Opis                   │
+  ├──────────────────────────────┼─────────────────────────────────────────┤
+  │ Pridobitev strojne opreme    │ Nakup računalnikov, shramba, tiskalniki │
+  ├──────────────────────────────┼─────────────────────────────────────────┤
+  │ Pridobitev programske opreme │ Licenca za vsakega uporabnika           │
+  ├──────────────────────────────┼─────────────────────────────────────────┤
+  │ Namestitev                   │ Migracija, konfiguracija                │
+  ├──────────────────────────────┼─────────────────────────────────────────┤
+  │ Usposabljanje                │ Izobraževanje IT osebja in uporabnikov  │
+  ├──────────────────────────────┼─────────────────────────────────────────┤
+  │ Podpora                      │ Help desk, tehnična pomoč               │
+  ├──────────────────────────────┼─────────────────────────────────────────┤
+  │ Vzdrževanje                  │ Nadgradnje, popravki                    │
+  ├──────────────────────────────┼─────────────────────────────────────────┤
+  │ Infrastruktura               │ Omrežja, varnostne kopije               │
+  ├──────────────────────────────┼─────────────────────────────────────────┤
+  │ Izpad                        │ Izgubljena produktivnost med okvarom    │
+  ├──────────────────────────────┼─────────────────────────────────────────┤
+  │ Prostor in energija          │ Elektrika, prostor za strežnike         │
+  └──────────────────────────────┴─────────────────────────────────────────┘
+
+  Ključni izzivi upravljanja IT
+
+  - Načrtovanje kapacitet — dovolj zmogljivosti za rast
+  - Razširljivost (Scalability) — sistem prenese več uporabnikov
+  - Lastništvo vs. najem (outsourcing, oblak)
+  - BYOD (Bring Your Own Device) — varnost, MDM (Mobile Device Management)
+  - Globalni sistemi — lokalizacija, jeziki, kultura, zakonodaja
+
+  ---
+  Računalništvo v oblaku (Cloud Computing)
+
+  Vrste oblakov
+
+  ┌──────────────────┬───────────────────────────────────────────────┐
+  │      Vrsta       │                     Opis                      │
+  ├──────────────────┼───────────────────────────────────────────────┤
+  │ Javni oblak      │ Deljeni viri, dostopni vsem (npr. AWS, Azure) │
+  ├──────────────────┼───────────────────────────────────────────────┤
+  │ Zasebni oblak    │ Namenjen eni organizaciji                     │
+  ├──────────────────┼───────────────────────────────────────────────┤
+  │ Hibridni oblak   │ Kombinacija javnega in zasebnega              │
+  ├──────────────────┼───────────────────────────────────────────────┤
+  │ Vertikalni oblak │ Prilagojen specifični panogi                  │
+  └──────────────────┴───────────────────────────────────────────────┘
+
+  Storitveni modeli
+
+  ┌─────────────────────┬──────────────────────────────────┬───────────────────────────────────────┐
+  │        Model        │           Upravljanje            │                Primeri                │
+  ├─────────────────────┼──────────────────────────────────┼───────────────────────────────────────┤
+  │ IaaS                │ Stranka upravlja aplikacije,     │ AWS, Azure, Google Cloud, Rackspace   │
+  │ (Infrastructure)    │ podatke, OS                      │                                       │
+  ├─────────────────────┼──────────────────────────────────┼───────────────────────────────────────┤
+  │ PaaS (Platform)     │ Stranka upravlja aplikacije in   │ MS Azure, Google App Engine           │
+  │                     │ podatke                          │                                       │
+  ├─────────────────────┼──────────────────────────────────┼───────────────────────────────────────┤
+  │ SaaS (Software)     │ Ponudnik upravlja vse            │ Salesforce, Google Apps, Dropbox,     │
+  │                     │                                  │ Apple iCloud                          │
+  └─────────────────────┴──────────────────────────────────┴───────────────────────────────────────┘
+
+  Dodatne storitve
+
+  - SECaaS — varnost kot storitev (antivirus, DLP, IDS)
+  - FaaS / XaaS — funkcije kot storitev, "serverless"
+  - Low-code / No-code — razvoj brez programiranja
+
+  Prednosti oblaka
+
+  - Dostop od kjerkoli (naprava, lokacija)
+  - Boljše sodelovanje in produktivnost
+  - Nižji stroški — pay-per-use, brez CAPEX
+  - Hitra skalabilnost (navzgor in navzdol)
+  - Večja fleksibilnost in agilnost
+  - Hitrejši razvoj in uvedba rešitev
+
+  Tveganja oblaka
+
+  ┌────────────────────┬──────────────────────────────────────┐
+  │      Tveganje      │                 Opis                 │
+  ├────────────────────┼──────────────────────────────────────┤
+  │ Podedovani sistemi │ Težka migracija legacy sistemov      │
+  ├────────────────────┼──────────────────────────────────────┤
+  │ Zanesljivost       │ Izpadi storitev                      │
+  ├────────────────────┼──────────────────────────────────────┤
+  │ Zasebnost          │ Nadzor nad podatki                   │
+  ├────────────────────┼──────────────────────────────────────┤
+  │ Varnost            │ Dostop, izolacija, napadi            │
+  ├────────────────────┼──────────────────────────────────────┤
+  │ Pravni vidik       │ Regulativa, lokacija podatkov (GDPR) │
+  ├────────────────────┼──────────────────────────────────────┤
+  │ Zlorabe            │ Kriminal v oblaku                    │
+  └────────────────────┴──────────────────────────────────────┘
+
+  Ponudniki oblaka
+
+  - AWS: največ storitev, zrel ekosistem, močna infrastruktura
+  - Azure: integracija z Microsoft okoljem, hibridne rešitve
+  - Google Cloud: specializiran za AI/ML, Kubernetes
+
+  Razširjena, virtualna in mešana resničnost (AR/VR/MR)
+
+  - Izobraževanje: VR simulatorji, AR interaktivni učbeniki
+  - Industrija: AR načrtovanje (BMW, Airbus)
+  - Trgovina: AR "try-on", VR virtualni ogledi pohištva
+  - Zdravstvo: AR/MR podpora operacijam, VR rehabilitacija
+
+  Prihodnost arhitektur
+
+  - Kvantno računalništvo: qubit = hkratno 0 in 1
+  - Potencial: eksponentna procesna moč, kriptografija, medicina, finance
+
+  Strateški trendi strojne opreme
+
+  - Manjše, hitrejše, cenejše, zmogljivejše
+  - Dilema: kupiti zdaj ali čakati?
+  - BYOD, DaaS (Device as a Service)
+
+  ---
+  P7 — Podatkovni vidik informacijskih sistemov
+
+  Hierarhija podatkov
+
+  bit → bajt → polje → zapis → datoteka → baza podatkov
+
+  Arhitekture podatkovnih baz
+
+  - Hierarhična — drevesna struktura (starš-otrok)
+  - Mrežna — več starševskih zapisov za enega otroka
+  - Relacijska — tabele z vrsticami in stolpci; prevladujoč pristop
+
+  Relacijska baza podatkov
+
+  - Sestavljena iz tabel (relacij)
+  - Vsaka tabela = entitetni tip
+  - Skupno polje = osnova za povezavo tabel
+  - Primarni ključ (PK): enolična identifikacija vrstice
+  - Tuji ključ (FK): kazalec na primarni ključ druge tabele
+
+  Tipi relacij
+
+  ┌─────┬────────────────────────────────────────────┐
+  │ Tip │                   Primer                   │
+  ├─────┼────────────────────────────────────────────┤
+  │ 1:1 │ Zaposleni — Parkirno dovoljenje            │
+  ├─────┼────────────────────────────────────────────┤
+  │ 1:N │ Oddelek — Zaposleni                        │
+  ├─────┼────────────────────────────────────────────┤
+  │ N:M │ Študent — Predmet (rešitev: vmesna tabela) │
+  └─────┴────────────────────────────────────────────┘
+
+  ER modeliranje (Entity-Relationship)
+
+  - Entiteta — objekt realnega sveta (npr. STUDENT, PREDMET)
+  - Atribut — lastnost entitete (npr. Ime, Priimek)
+  - Primarni ključ — enolični identifikator
+  - Relacija — povezava med entitetami
+  - Poslovna pravila — definirajo kardinalnost (obvezno/opcijsko)
+  - Vmesna tabela — rešitev za M:N relacije (npr. REGISTRATION za STUDENT–CLASS)
+
+  Normalizacija
+
+  Problem nestrukturiranih podatkov: redundanca, ponavljajoče skupne, NULL vrednosti, težavno
+  vzdrževanje.
+
+  Funkcionalne odvisnosti: determinanta → atribut (npr. Customer ID → Ime, Naslov)
+
+  1. Normalna oblika (1. NO)
+
+  - En atribut = ena vrednost (atomarni atributi)
+  - Odstranimo ponavljajoče skupine
+  - Še vedno prisotna redundanca
+
+  2. Normalna oblika (2. NO)
+
+  - Relacija je v 1. NO
+  - Odstranimo parcialne odvisnosti (atributi, ki so odvisni le od dela sestavljenega ključa)
+  - Razdelimo na več tabel
+
+  3. Normalna oblika (3. NO)
+
+  - Relacija je v 2. NO
+  - Odstranimo tranzitivne odvisnosti (A → B → C, kjer C ni odvisen neposredno od ključa)
+  - Rezultat: jasne, neodvisne relacije
+
+  Postopek normalizacije (koraki)
+
+  1. Podatke zapišemo kot relacijo
+  2. Odpravimo ponavljajoče skupine → 1. NO
+  3. Določimo ključ in funkcionalne odvisnosti
+  4. Odpravimo parcialne odvisnosti → 2. NO
+  5. Odpravimo tranzitivne odvisnosti → 3. NO
+  6. Povežemo relacije s primarnimi in tujimi ključi
+
+  Primer: Normalizacija računa
+
+  - R1 (originalna): St_racuna, Datum, St_kupca, Naziv_kupca, Znesek, (St_izdelka, Naziv_izdelka,
+  Kolicina, Cena, Vrednost)
+  - Po 1. NO: R11 (racun-level) + R12 (racun-izdelek)
+  - Po 2. NO: R121 (St_izdelka, Naziv, Cena) + R122 (#St_racuna, #St_izdelka, Kolicina, Vrednost)
+  - Po 3. NO: R111 (St_kupca, Naziv) + R112 (St_racuna, Datum, #St_kupca, Znesek)
+  - Končne tabele: R121, R122, R111, R112
+
+  SQL in poizvedovanje
+
+  SELECT Student_Name
+  FROM Student_Database
+  WHERE Grade_Point_Average >= 3.40 AND Grade_Point_Average < 3.60
+  - SELECT → vrstice
+  - PROJECT → stolpci
+  - JOIN → združevanje tabel preko skupnih ključev
+  - QBE (Query By Example) — grafični vmesnik za poizvedbe
+
+  DBMS (Database Management System)
+
+  - Ustvarjanje, shranjevanje, organiziranje, dostop do podatkov
+  - Logični pogled ≠ fizični pogled — ena baza, več uporabniških pogledov
+  - Zmogljivosti: definicija podatkov, podatkovni slovar, SQL, poizvedbe in poročila
+
+  Porazdeljene baze podatkov
+
+  - Podatki na več strežnikih
+  - Replikacija — kopija podatkov na več lokacijah
+  - Fragmentacija — razdelitev tabele na segmente po strežnikih
+  - Prednosti: skalabilnost, odpornost na izpad
+
+  Onkraj relacijskega modela
+
+  ┌─────────────────┬────────────────────────────────────────────────────────────────────┐
+  │   Tehnologija   │                                Opis                                │
+  ├─────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ NoSQL           │ Prilagodljivost, obseg, hitrost (dokumenti, grafi, ključ-vrednost) │
+  ├─────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Cloud DB        │ Baza kot storitev, skalabilnost                                    │
+  ├─────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Porazdeljene DB │ Več lokacij, fragmentacija                                         │
+  ├─────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Blockchain      │ Porazdeljena knjiga brez centralnega nadzora                       │
+  └─────────────────┴────────────────────────────────────────────────────────────────────┘
+
+  Blockchain (veriga blokov)
+
+  - Bloki + časovni žig
+  - Peer-to-peer omrežje — brez centralnega nadzora
+  - Transparentnost + težje prirejanje
+  - Poslovna vrednost: dobavne verige, sledljivost, zaupanje med partnerji
+  - Ne mora biti javna veriga blokov (zasebne blockchain rešitve)
+
+  Infrastruktura poslovne inteligence
+
+  Podatkovni viri (operativni, zgodovinski, IoT, splet, audio/video, zunanji)
+      ↓ ETL (Extract, Transform, Load)
+  Data Warehouse + Data Mart
+      ↓                    ↓
+  Casual users          Power users
+  (poizvedbe, poročila,  (OLAP, data mining,
+   dashboardi)           napredne analize)
+
+  Hadoop Data Lake → Analytic Platform
+
+  OLAP (Online Analytical Processing)
+
+  - Večdimenzionalni pogled na podatke
+  - Dimenzije: produkt, regija, čas
+  - Actual vs. projected — dejanski vs. načrtovani
+  - Hitri odgovori na ad hoc vprašanja
+  - "Kockanje" podatkov (data cube)
+
+  Splet in podatkovne baze
+
+  Spletni brskalnik → Spletni strežnik → Aplikacijski strežnik → Strežnik baze → Baza podatkov
+
+  Upravljanje podatkov (Data Governance)
+
+  - Pravila: kdo lahko dostopa, spreminja, deli podatke
+  - Državna regulativa (npr. GDPR, zakon o AI)
+  - Primer: Slovenija — pravila za umetno inteligenco (Finance, 27.3.2026)
+
+  Kakovost podatkov (Data Quality)
+
+  - Točnost, konsistentnost, ažurnost
+  - Problemi: napake, podvajanje, neusklajenost
+  - Rešitve:
+    - Data audit — revizija podatkov
+    - Data cleansing — čiščenje in popravljanje podatkov
+
+  ---
+  Povzetek ključnih konceptov po predavanjih
+
+  ┌─────┬──────────────────┬────────────────────────────────────────────────────────────────────────┐
+  │  P  │       Tema       │                             Ključni pojmi                              │
+  ├─────┼──────────────────┼────────────────────────────────────────────────────────────────────────┤
+  │ P1  │ Uvod v IS        │ Podatki, informacije, znanje; komponente IS; vrste IS po ravneh        │
+  ├─────┼──────────────────┼────────────────────────────────────────────────────────────────────────┤
+  │ P2  │ Podatki in       │ Hierarhija podatkov, silose, znanje, business analytics                │
+  │     │ odločitve        │ (opisna/napovedna/predpisna)                                           │
+  ├─────┼──────────────────┼────────────────────────────────────────────────────────────────────────┤
+  │ P3  │ Organizacije in  │ Porter 5 sil, poslovni procesi, digitalna transformacija, projekt vs.  │
+  │     │ procesi          │ proces                                                                 │
+  ├─────┼──────────────────┼────────────────────────────────────────────────────────────────────────┤
+  │ P4  │ Vrste IS         │ TPS, FAIS, ERP, SCM, CRM, DSS, ESS; centralizacija vs.                 │
+  │     │                  │ decentralizacija                                                       │
+  ├─────┼──────────────────┼────────────────────────────────────────────────────────────────────────┤
+  │ P5  │ Strategija in    │ NPV, ROI, Business Case; projektno vodenje (trojna omejitev, 5         │
+  │     │ vrednost         │ procesov, Gantt, PERT); portfelj; tveganja; kognitivne pristranskosti  │
+  ├─────┼──────────────────┼────────────────────────────────────────────────────────────────────────┤
+  │ P6  │ Arhitektura IS   │ IT infrastruktura, TCO, oblak (IaaS/PaaS/SaaS,                         │
+  │     │                  │ javni/zasebni/hibridni), AR/VR, kvantno računalništvo                  │
+  ├─────┼──────────────────┼────────────────────────────────────────────────────────────────────────┤
+  │ P7  │ Podatkovni vidik │ ER modeliranje, relacijske baze, normalizacija (1/2/3 NO), SQL, JOIN,  │
+  │     │                  │ NoSQL, blockchain, data warehouse, OLAP, data governance               │
+  └─────┴──────────────────┴────────────────────────────────────────────────────────────────────────┘
+
+  ---
+  ▎ Nasvet za učenje: Predavanja se med seboj dopolnjujejo — P4 (vrste IS) + P6 (arhitektura) + P7
+  (podatki) skupaj tvorijo tehnični del; P3 + P5 sta bolj strateška/upravljavska; P1 + P2 sta uvodni. Za
+   izpit se splača razumeti konkretne primere (McAfee, Southwest Airlines, Al-Asasyah) in znati
+  razložiti koncepte z lastnimi besedami.
