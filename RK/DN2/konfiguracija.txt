@@ -1,0 +1,154 @@
+Pingi in tracerouti:
+/ # ping 192.168.6.2 -c 5
+PING 192.168.6.2 (192.168.6.2): 56 data bytes
+64 bytes from 192.168.6.2: seq=0 ttl=62 time=4.907 ms
+64 bytes from 192.168.6.2: seq=1 ttl=62 time=3.236 ms
+64 bytes from 192.168.6.2: seq=2 ttl=62 time=3.544 ms
+64 bytes from 192.168.6.2: seq=3 ttl=62 time=3.401 ms
+64 bytes from 192.168.6.2: seq=4 ttl=62 time=3.246 ms
+
+--- 192.168.6.2 ping statistics ---
+5 packets transmitted, 5 packets received, 0% packet loss
+round-trip min/avg/max = 3.236/3.666/4.907 ms
+/ # traceroute 192.168.6.2
+traceroute to 192.168.6.2 (192.168.6.2), 30 hops max, 46 byte packets
+ 1  10.0.0.1 (10.0.0.1)  1.019 ms  7.276 ms  1.014 ms
+ 2  1.1.1.2 (1.1.1.2)  2.304 ms  7.624 ms  2.933 ms
+ 3  192.168.6.2 (192.168.6.2)  2.393 ms  7.455 ms  3.271 ms
+
+----Prekinitev povezave----
+
+/ # ping 192.168.6.2 -c 5
+PING 192.168.6.2 (192.168.6.2): 56 data bytes
+64 bytes from 192.168.6.2: seq=0 ttl=61 time=4.366 ms
+64 bytes from 192.168.6.2: seq=1 ttl=61 time=5.010 ms
+64 bytes from 192.168.6.2: seq=2 ttl=61 time=4.861 ms
+64 bytes from 192.168.6.2: seq=3 ttl=61 time=4.667 ms
+64 bytes from 192.168.6.2: seq=4 ttl=61 time=5.162 ms
+
+--- 192.168.6.2 ping statistics ---
+5 packets transmitted, 5 packets received, 0% packet loss
+round-trip min/avg/max = 4.366/4.813/5.162 ms
+/ # traceroute 192.168.6.2
+traceroute to 192.168.6.2 (192.168.6.2), 30 hops max, 46 byte packets
+ 1  10.0.0.1 (10.0.0.1)  0.874 ms  1.306 ms  1.007 ms
+ 2  1.1.1.9 (1.1.1.9)  2.029 ms  2.720 ms  2.289 ms
+ 3  1.1.1.5 (1.1.1.5)  4.665 ms  4.731 ms  3.806 ms
+ 4  192.168.6.2 (192.168.6.2)  4.640 ms  7.620 ms  4.386 ms
+/ #
+
+
+
+Usmerjevalne tabele:
+R1:
+1.1.1.4/30 dev eth2  proto kernel  scope link  src 1.1.1.6
+1.1.1.8/30 dev eth1  proto kernel  scope link  src 1.1.1.9
+10.0.0.0/30 via 1.1.1.10 dev eth1  proto zebra  metric 1
+127.0.0.0/8 dev lo  proto kernel  scope link  src 127.0.0.1
+172.16.0.0/30 dev eth0  proto kernel  scope link  src 172.16.0.1
+192.168.6.0/30 via 1.1.1.5 dev eth2  proto zebra  metric 1
+
+R2:
+1.1.1.0/30 dev eth2  proto kernel  scope link  src 1.1.1.2
+1.1.1.4/30 dev eth1  proto kernel  scope link  src 1.1.1.5
+10.0.0.0/30 via 1.1.1.1 dev eth2  proto zebra  metric 1
+127.0.0.0/8 dev lo  proto kernel  scope link  src 127.0.0.1
+172.16.0.0/30 via 1.1.1.6 dev eth1  proto zebra  metric 1
+192.168.6.0/30 dev eth0  proto kernel  scope link  src 192.168.6.1
+
+R3:
+1.1.1.4/30 dev eth2  proto kernel  scope link  src 1.1.1.6
+1.1.1.8/30 dev eth1  proto kernel  scope link  src 1.1.1.9
+10.0.0.0/30 via 1.1.1.10 dev eth1  proto zebra  metric 1
+127.0.0.0/8 dev lo  proto kernel  scope link  src 127.0.0.1
+172.16.0.0/30 dev eth0  proto kernel  scope link  src 172.16.0.1
+192.168.6.0/30 via 1.1.1.5 dev eth2  proto zebra  metric 1
+
+
+
+Ukazi za nastavitev:
+PC1:
+vi /etc/network/interfaces
+
+auto eth0
+iface eth0 inet static
+	address 10.0.0.2
+	netmask 255.255.255.252
+	gateway 10.0.0.1
+
+ifup eth0
+
+
+PC2:
+vi /etc/network/interfaces
+
+auto eth0
+iface eth0 inet static
+	address 192.168.6.2
+	netmask 255.255.255.252
+	gateway 192.168.6.1
+
+ifup eth0
+
+
+PC3:
+vi /etc/network/interfaces
+
+auto eth0
+iface eth0 inet static
+	address 172.16.0.2
+	netmask 255.255.255.252
+	gateway 172.16.0.1
+
+ifup eth0
+
+
+R1:
+configure
+set interfaces ethernet eth0 address 10.0.0.1/30
+set interfaces ethernet eth1 address 1.1.1.1/30
+set interfaces ethernet eth2 address 1.1.1.10/30
+set protocols bgp 65531 neighbor 1.1.1.2 remote-as '65532'
+set protocols bgp 65531 neighbor 1.1.1.9 remote-as '65533'
+set protocols bgp 65531 neighbor 1.1.1.2 update-source 1.1.1.1
+set protocols bgp 65531 neighbor 1.1.1.9 update-source 1.1.1.10
+set protocols bgp 65531 parameters router-id 1.1.1.1
+set protocols bgp 65531 parameters router-id 1.1.1.10
+set protocols bgp 65531 network 10.0.0.0/30
+commit
+save
+exit
+
+
+R2:
+configure
+set interfaces ethernet eth0 address 192.168.6.1/30
+set interfaces ethernet eth1 address 1.1.1.5/30
+set interfaces ethernet eth2 address 1.1.1.2/30
+set protocols bgp 65532 neighbor 1.1.1.6 remote-as '65533'
+set protocols bgp 65532 neighbor 1.1.1.1 remote-as '65531'
+set protocols bgp 65532 neighbor 1.1.1.6 update-source 1.1.1.5
+set protocols bgp 65532 neighbor 1.1.1.1 update-source 1.1.1.2
+set protocols bgp 65532 parameters router-id 1.1.1.5
+set protocols bgp 65532 parameters router-id 1.1.1.2
+set protocols bgp 65532 network 192.168.6.0/30
+commit
+save
+exit
+
+
+R3:
+configure
+set interfaces ethernet eth0 address 172.16.0.1/30
+set interfaces ethernet eth1 address 1.1.1.9/30
+set interfaces ethernet eth2 address 1.1.1.6/30
+set protocols bgp 65533 neighbor 1.1.1.10 remote-as '65531'
+set protocols bgp 65533 neighbor 1.1.1.5 remote-as '65532'
+set protocols bgp 65533 neighbor 1.1.1.10 update-source 1.1.1.9
+set protocols bgp 65533 neighbor 1.1.1.5 update-source 1.1.1.6
+set protocols bgp 65533 parameters router-id 1.1.1.9
+set protocols bgp 65533 parameters router-id 1.1.1.6
+set protocols bgp 65533 network 172.16.0.0/30
+commit
+save
+exit
