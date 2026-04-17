@@ -1,0 +1,47 @@
+XYZWABCD
+PC1 (10.A.0.2/16 , 2001:db8:e:A::2/64 ):
+ip addr add 2001:db8:e:A::2/64 dev eth0
+ip addr add 10.A.0.2/16 dev eth0
+
+ip route add 0.0.0.0/0 via 10.A.0.1
+ip route add ::/0 via 2001:db8:e:A::1
+
+
+R1 (10.A.0.1/16 , 2001:db8:e:A::1/64 , 10.0.B.2/24 , 2001:db8:B:f::2/64 ):
+ip addr add 2001:db8:B:f::2/64 dev eth0
+ip addr add 10.0.B.2/24 dev eth0
+ip addr add 2001:db8:e:A::1/64 dev eth1
+ip addr add 10.A.0.1/16 dev eth1
+
+ip route add 0.0.0.0/0 via 10.0.B.1
+ip route add ::/0 via 2001:db8:B:f::1
+
+
+R2 (10.0.B.1/24 , 2001:db8:B:f::1/64 , 192.168.C.1/24 , 2001:db8:ef:C::1/64 ):
+ip addr add 2001:db8:ef:C::1/64 dev eth2
+ip addr add 192.168.C.1/24 dev eth2
+ip addr add 2001:db8:B:f::1/64 dev eth1
+ip addr add 10.0.B.1/24 dev eth1
+
+ip route add 10.A.0.0/16 via 10.0.B.2
+ip route add 2001:db8:e:A::/64 via 2001:db8:B:f::2
+ip route add 172.16.D.0/24 via 192.168.C.2
+ip route add 2001:db8:D:ef::/64 via 2001:db8:ef:C::2
+
+
+R3 (172.16.D.1/24 , 2001:db8:D:ef::1/64 , 192.168.C.2/24 , 2001:db8:ef:C::2/64 ):
+ip addr add 2001:db8:ef:C::2/64 dev eth0
+ip addr add 192.168.C.2/24 dev eth0
+ip addr add 2001:db8:D:ef::1/64 dev eth1
+ip addr add 172.16.D.1/24 dev eth1
+
+ip route add 0.0.0.0/0 via 192.168.C.1
+ip route add ::/0 via 2001:db8:ef:C::1
+
+
+PC2 (172.16.D.2/24 , 2001:db8:D:ef::2/64 ):
+ip addr add 2001:db8:D:ef::2/64 dev eth0
+ip addr add 172.16.D.2/24 dev eth0
+
+ip route add 0.0.0.0/0 via 172.16.D.1
+ip route add ::/0 via 2001:db8:D:ef::1

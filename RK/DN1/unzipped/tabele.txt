@@ -46,11 +46,3 @@ R3:
 fe80::/64 dev eth1  proto kernel  metric 256
 fe80::/64 dev eth0  proto kernel  metric 256
 default via 2001:db8:ef:6::1 dev eth0  metric 1024
-
-PC2:
-default via 172.16.0.1 dev eth0
-172.16.0.0/24 dev eth0 scope link  src 172.16.0.2
-
-2001:db8:0:ef::/64 dev eth0  metric 256
-fe80::/64 dev eth0  metric 256
-default via 2001:db8:0:ef::1 dev eth0  metric 1024

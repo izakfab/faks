@@ -50,7 +50,7 @@ Internet ima **dvojni učinek** na konkurenco. Po eni strani **povečuje konkure
 
 ### Disruptivne inovacije in ustvarjalno uničenje
 
-**Disruptivna inovacija** radikalno spremeni trg — začne se kot slabša, a cenejša alternativa, ki postopoma prerase obstoječo rešitev (krivulja: *disruptive* vs. *sustaining*). **Ustvarjalno uničenje** (ang. *creative destruction*) pomeni, da nova tehnologija uniči obstoječe poslovne modele. Primeri vključujejo: mikroprocesorje (konec transistorskih podjetij), digitalno fotografijo (konec filmske industrije), World Wide Web (konec fizičnih trgovin), spletne storitve (SaaS proti klasični programski opremi), algoritem PageRank (Google proti tradicionalnim iskalnikom).
+**Disruptivna inovacija** radikalno spremeni trg — začne se kot slabša, a cenejša alternativa, ki postopoma prerase obstoječo rešitev (krivulja: *disruptive* vs. *sustaining*). **Ustvarjalno uničenje** (ang. *creative destruction*) pomeni, da nova tehnologija uniči obstoječe poslovne modele. Primeri vključujejo: mikroprocesorje (konec tranzistorskih podjetij), digitalno fotografijo (konec filmske industrije), World Wide Web (konec fizičnih trgovin), spletne storitve (SaaS proti klasični programski opremi), algoritem PageRank (Google proti tradicionalnim iskalnikom).
 
 ### Sinergije, temeljne kompetence in mrežne strategije
 
@@ -168,7 +168,7 @@ BPI uporablja metodologijo **DMAIC** s petimi koraki: **Define** (sestavi ekipo,
 
 Prenova procesa vedno vključuje primerjavo:
 
-**AS-IS** (obstoječe stanje) opisuje trenutni proces s vsemi koraki, zamudami in ozkih grli. Primer fizične knjigarne: stranka pride v knjigaren → išče po policah → knjiga ni na voljo → prodajalec ročno poišče → naroči → stranka se vrne po knjigo.
+**AS-IS** (obstoječe stanje) opisuje trenutni proces z vsemi koraki, zamudami in ozkimi grli. Primer fizične knjigarne: stranka pride v knjigarno → išče po policah → knjiga ni na voljo → prodajalec ročno poišče → naroči → stranka se vrne po knjigo.
 
 **TO-BE** (želeno stanje) opisuje prenovljen proces. Primer spletne knjigarne: dostop do spletne knjigarne → iskanje po katalogu → knjiga na voljo → vnos naročila in plačila → dostava na dom. Proces je krajši, hitrejši in ne zahteva fizičnega obiska.
 

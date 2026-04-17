@@ -224,17 +224,17 @@ Tri ključne dimenzije:
 
 ## Ključni pojmi za ponavljanje
 
-| Pojem | Definicija |
-|---|---|
-| **IS** | Socio-tehnični sistem za zbiranje, obdelavo, shranjevanje in distribucijo informacij |
-| **IT** | Tehnološki del IS (strojna + programska oprema + omrežja) |
-| **TPS** | Transaction Processing System — obdelava vsakodnevnih transakcij |
-| **MIS** | Management Information System — poročanje za taktično raven |
-| **DSS** | Decision Support System — podpora analitičnemu odločanju |
-| **ESS** | Executive Support System — nadzorne plošče za strateško raven |
-| **ERP** | Enterprise Resource Planning — integriran sistem za vsa funkcionalna področja |
-| **BI** | Business Intelligence — analitični sistemi za pridobivanje vpogledov iz podatkov |
-| **CRM** | Customer Relationship Management — upravljanje odnosov s strankami |
-| **KPI** | Key Performance Indicator — ključni kazalnik uspešnosti |
-| **Digitalizacija** | Avtomatizacija obstoječih procesov (isto, a hitreje) |
-| **Digitalna preobrazba** | Sprememba poslovnega modela z uporabo tehnologije (drugačen način dela) |
+| Pojem                    | Definicija                                                                           |
+| ------------------------ | ------------------------------------------------------------------------------------ |
+| **IS**                   | Socio-tehnični sistem za zbiranje, obdelavo, shranjevanje in distribucijo informacij |
+| **IT**                   | Tehnološki del IS (strojna + programska oprema + omrežja)                            |
+| **TPS**                  | Transaction Processing System — obdelava vsakodnevnih transakcij                     |
+| **MIS**                  | Management Information System — poročanje za taktično raven                          |
+| **DSS**                  | Decision Support System — podpora analitičnemu odločanju                             |
+| **ESS**                  | Executive Support System — nadzorne plošče za strateško raven                        |
+| **ERP**                  | Enterprise Resource Planning — integriran sistem za vsa funkcionalna področja        |
+| **BI**                   | Business Intelligence — analitični sistemi za pridobivanje vpogledov iz podatkov     |
+| **CRM**                  | Customer Relationship Management — upravljanje odnosov s strankami                   |
+| **KPI**                  | Key Performance Indicator — ključni kazalnik uspešnosti                              |
+| **Digitalizacija**       | Avtomatizacija obstoječih procesov (isto, a hitreje)                                 |
+| **Digitalna preobrazba** | Sprememba poslovnega modela z uporabo tehnologije (drugačen način dela)              |

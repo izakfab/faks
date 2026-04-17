@@ -130,11 +130,11 @@ Zillow je nepremičninska platforma z milijoni podatkov. Njihov algoritem **Zest
 
 ### Primer: UPS in tri vrste analitike
 
-| Tip analitike | Ključno vprašanje | Primer pri UPS | Poslovni učinek |
-|---|---|---|---|
-| **Opisna** | Kaj se je zgodilo? | DIAD, sledenje paketom, merjenje kilometrov in napak | Pregled nad delovanjem |
-| **Napovedna** | Kaj se bo zgodilo? | HEAT — napoved obremenitev in zamud, digitalni dvojček | Boljše planiranje |
-| **Predpisna** | Kaj naj naredimo? | ORION — optimizacija dnevnih poti, prilagoditve za vreme/promet | Neposredni finančni prihranki |
+| Tip analitike | Ključno vprašanje  | Primer pri UPS                                                  | Poslovni učinek               |
+| ------------- | ------------------ | --------------------------------------------------------------- | ----------------------------- |
+| **Opisna**    | Kaj se je zgodilo? | DIAD, sledenje paketom, merjenje kilometrov in napak            | Pregled nad delovanjem        |
+| **Napovedna** | Kaj se bo zgodilo? | HEAT — napoved obremenitev in zamud, digitalni dvojček          | Boljše planiranje             |
+| **Predpisna** | Kaj naj naredimo?  | ORION — optimizacija dnevnih poti, prilagoditve za vreme/promet | Neposredni finančni prihranki |
 
 ---
 
@@ -157,11 +157,11 @@ Med fazami obstajajo povratne zanke — če npr. v fazi izbire ugotovimo, da nob
 
 ### Struktura odločitev po ravneh
 
-| Raven upravljanja | Tip odločitve | Primeri |
-|---|---|---|
-| **Senior Management** | Nestrukturirane | vstop/izstop s trga, odobritev proračuna, dolgoročni cilji |
-| **Middle Management** | Pol-strukturirane | marketinški načrt, oddelčni proračun, korporativna spletna stran |
-| **Operational Management** | Strukturirane | upravičenost nadur, dopolnitev zalog, kreditni pogoji, posebne ponudbe |
+| Raven upravljanja          | Tip odločitve     | Primeri                                                                |
+| -------------------------- | ----------------- | ---------------------------------------------------------------------- |
+| **Senior Management**      | Nestrukturirane   | vstop/izstop iz trga, odobritev proračuna, dolgoročni cilji            |
+| **Middle Management**      | Pol-strukturirane | marketinški načrt, oddelčni proračun, korporativna spletna stran       |
+| **Operational Management** | Strukturirane     | upravičenost nadur, dopolnitev zalog, kreditni pogoji, posebne ponudbe |
 
 ### Okvir za podporo odločanju
 
@@ -208,12 +208,12 @@ Napovedovanje uporablja **zgodovinske podatke** za projekcijo prihodnjih vrednos
 
 Balanced Scorecard povezuje **strategijo** z merljivimi KPI-ji prek štirih perspektiv:
 
-| Perspektiva | Primeri KPI-jev |
-|---|---|
-| **Finančna** | denarni tok, ROI, finančni rezultat, donosnost kapitala |
-| **Stranke** | kakovost dostave, zadovoljstvo strank, zvestoba, retencija |
+| Perspektiva          | Primeri KPI-jev                                                            |
+| -------------------- | -------------------------------------------------------------------------- |
+| **Finančna**         | denarni tok, ROI, finančni rezultat, donosnost kapitala                    |
+| **Stranke**          | kakovost dostave, zadovoljstvo strank, zvestoba, retencija                 |
 | **Poslovni procesi** | število aktivnosti, čas izvedbe procesa, učinkovitost virov, izpadi opreme |
-| **Učenje in rast** | stopnja investicij, bolniške, interne napredovanja, fluktuacija zaposlenih |
+| **Učenje in rast**   | stopnja investicij, bolniške, interne napredovanja, fluktuacija zaposlenih |
 
 Vse štiri perspektive so povezane s **strategijo in cilji organizacije** v sredini — KPI-ji niso izolirani, ampak tvorijo celoto.
 
@@ -235,14 +235,14 @@ Ključno pravilo: **odgovornost in nadzor ostaneta pri organizaciji** — pristo
 
 ### Področja uporabe UI
 
-| Področje | Primeri |
-|---|---|
-| **Marketing in prodaja** | priporočilni sistemi, personalizacija, dinamično oblikovanje cen |
-| **Finance** | odkrivanje goljufij, kreditno ocenjevanje, algoritemsko trgovanje |
-| **Operacije in logistika** | optimizacija poti, napoved povpraševanja, upravljanje zalog |
-| **HR** | selekcija kandidatov, napoved fluktuacije |
-| **Podpora strankam** | chatboti, avtomatska obdelava zahtevkov |
-| **Proizvodnja** | napovedno vzdrževanje, nadzor kakovosti |
+| Področje                   | Primeri                                                           |
+| -------------------------- | ----------------------------------------------------------------- |
+| **Marketing in prodaja**   | priporočilni sistemi, personalizacija, dinamično oblikovanje cen  |
+| **Finance**                | odkrivanje goljufij, kreditno ocenjevanje, algoritemsko trgovanje |
+| **Operacije in logistika** | optimizacija poti, napoved povpraševanja, upravljanje zalog       |
+| **HR**                     | selekcija kandidatov, napoved fluktuacije                         |
+| **Podpora strankam**       | chatboti, avtomatska obdelava zahtevkov                           |
+| **Proizvodnja**            | napovedno vzdrževanje, nadzor kakovosti                           |
 
 ### Prepoznavanje obrazov — etični izziv
 

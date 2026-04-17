@@ -50,11 +50,11 @@ Namen teh sistemov je pretvorba **vhodov v izhodne proizvode ali storitve** ter 
 
 FAIS delujejo na treh ravneh — **operativni**, **taktični** in **strateški** — za vsako funkcionalno področje:
 
-| Raven | Računovodstvo | Finance | Človeški viri | Proizvodnja/operacije | Marketing |
-|---|---|---|---|---|---|
-| **Strateška** | načrtovanje dobičkonosnosti | finančno načrtovanje | planiranje zaposlovanja, outsourcing | upravljanje življenjskega cikla izdelka | napovedovanje prodaje, načrtovanje oglaševanja |
-| **Taktična** | revizija, proračun | upravljanje naložb | administracija ugodnosti, ocenjevanje uspešnosti | nadzor kakovosti, upravljanje zalog | odnosi s strankami, avtomatizacija prodaje |
-| **Operativna** | plače, obveznosti, terjatve | upravljanje denarnih tokov, finančne transakcije | vzdrževanje kadrovske evidence | izpolnjevanje naročil, obdelava naročil | oblikovanje cen, profiliranje strank |
+| Raven          | Računovodstvo               | Finance                                          | Človeški viri                                    | Proizvodnja/operacije                   | Marketing                                      |
+| -------------- | --------------------------- | ------------------------------------------------ | ------------------------------------------------ | --------------------------------------- | ---------------------------------------------- |
+| **Strateška**  | načrtovanje dobičkonosnosti | finančno načrtovanje                             | planiranje zaposlovanja, outsourcing             | upravljanje življenjskega cikla izdelka | napovedovanje prodaje, načrtovanje oglaševanja |
+| **Taktična**   | revizija, proračun          | upravljanje naložb                               | administracija ugodnosti, ocenjevanje uspešnosti | nadzor kakovosti, upravljanje zalog     | odnosi s strankami, avtomatizacija prodaje     |
+| **Operativna** | plače, obveznosti, terjatve | upravljanje denarnih tokov, finančne transakcije | vzdrževanje kadrovske evidence                   | izpolnjevanje naročil, obdelava naročil | oblikovanje cen, profiliranje strank           |
 
 ---
 
