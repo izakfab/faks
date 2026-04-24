@@ -4,8 +4,10 @@ import java.util.*;
 
 public class ChatServer {
 
-	protected int serverPort = 8888;
+	protected int serverPort = 1234;
 	protected List<Socket> clients = new ArrayList<Socket>(); // list of clients
+	protected HashMap<Socket, String> client2Name = new HashMap<Socket, String>(); // pretvorba iz client v ime
+	protected HashMap<String, Socket> name2Client = new HashMap<String, Socket>(); // pretvorba iz imena v client
 
 	public static void main(String[] args) throws Exception {
 		new ChatServer();
@@ -49,15 +51,64 @@ public class ChatServer {
 			System.exit(1);
 		}
 	}
+	public void addClient(Socket hostname, String name) { // dodajanje parov v HashMap-a za pretvorbo med imeni in Socket objekti
+		client2Name.put(hostname, name);
+		name2Client.put(name, hostname);
+	}
+
+	public String getClientName(Socket hostname) {
+		return client2Name.get(hostname); // pridobivanje imen iz Socket objektov
+	}
+
+	public Socket getClient(String username) { // pridobivanje Socket objektov iz imen
+		if (name2Client.keySet().contains(username))
+			return name2Client.get(username);
+		return null;
+	}
 
 	// send a message to all clients connected to the server
-	public void sendToAllClients(String message) throws Exception {
+	public void sendToAllClients(String message, Socket sender) throws Exception {
+		Iterator<Socket> i = clients.iterator();
+		while (i.hasNext()) { // iterate through the client list
+			Socket socket = (Socket) i.next(); // get the socket for communicating with this client
+			if (sender != socket)
+				try {
+					DataOutputStream out = new DataOutputStream(socket.getOutputStream()); // create output stream for sending messages to the client
+					out.writeUTF(message); // send message to the client
+				} catch (Exception e) {
+					System.err.println("[system] could not send message to a client");
+					e.printStackTrace(System.err);
+				}
+		}
+	}
+
+	// pošiljanje zasebnega sporočila točno določenemu naslovniku
+	public void sendPrivate(String message, Socket sender) throws Exception {
+		String recipient = message.split(" ")[3].substring(2, message.split(" ")[3].length());
+		Socket socket;
+		try {
+			socket = getClient(recipient); // pridobivanje Socket objekta iz uporabnikovega imena (null če uporabnik ne obstaja)
+			// System.out.println(recipient);
+			if (socket != null) { // preverjanje ali uporabnik obstaja
+				DataOutputStream out = new DataOutputStream(socket.getOutputStream()); // create output stream for sending messages to the client
+				out.writeUTF(message); // pošiljanje prejemniku
+			} else {
+				DataOutputStream out = new DataOutputStream(sender.getOutputStream());
+				out.writeUTF(recipient + " could not be found"); // pošiljanje napake pošiljatelju
+			}
+		} catch (Exception e) {
+			System.err.println("[system] could not send message to a client");
+			e.printStackTrace(System.err);
+		}
+	}
+
+	public void sendGoodbye(Socket sender) throws Exception {
 		Iterator<Socket> i = clients.iterator();
 		while (i.hasNext()) { // iterate through the client list
 			Socket socket = (Socket) i.next(); // get the socket for communicating with this client
 			try {
 				DataOutputStream out = new DataOutputStream(socket.getOutputStream()); // create output stream for sending messages to the client
-				out.writeUTF(message); // send message to the client
+				out.writeUTF(client2Name.get(sender) + " has left the chat"); // send message to the client
 			} catch (Exception e) {
 				System.err.println("[system] could not send message to a client");
 				e.printStackTrace(System.err);
@@ -68,6 +119,13 @@ public class ChatServer {
 	public void removeClient(Socket socket) {
 		synchronized(this) {
 			clients.remove(socket);
+			try {
+				sendGoodbye(socket); // izpis naznanila da je uporabnik zapustil klepet
+			} catch (Exception e) {
+				System.err.println("[system] could not send goodby message to clients");
+				e.printStackTrace(System.err);
+			}
+			client2Name.remove(socket);
 		}
 	}
 }
@@ -110,10 +168,27 @@ class ChatServerConnector extends Thread {
 
 			System.out.println("[RKchat] [" + this.socket.getPort() + "] : " + msg_received); // print the incoming message in the console
 
-			String msg_send = "someone said: " + msg_received.toUpperCase(); // TODO
+			String[] msg_spliced = msg_received.split("_"); // prejeto sporočilo bo v obliki Tip_Čas_Sporočilo (Tip 1: ime novega uporabnika, Tip 0: sporočilo)
+
+			String msg_send = msg_spliced[2]; // iz msg_spliced pridobi sporočilo
+
+			for (int i = 3; i < msg_spliced.length; i++) { // popravi sporočilo, če vsebuje '_'
+				msg_send = msg_send + "_" + msg_spliced[i];
+			}
+
+			if (msg_spliced[0].equals("1")) { // preverjanje tipa sporočila in formatiranje sporočila
+				this.server.addClient(socket, msg_send); // dodajanje novega uporabnika
+				msg_send = msg_spliced[1] + " |" + msg_send + " has joined the chat";
+			} else {
+				msg_send = msg_spliced[1] + " |By " + this.server.getClientName(socket) + " |" + msg_send;
+			}
 
 			try {
-				this.server.sendToAllClients(msg_send); // send message to all clients
+				// System.out.println(msg_send.split(" ")[3]);
+				if (msg_send.split(" ")[3].charAt(1) == '@') // preverjanje ali se sporočilo začne z @, ki naznanja naslavljanje uporabnika
+					this.server.sendPrivate(msg_send, socket); // pošiljanje sporočila le naslovljencu
+				else
+					this.server.sendToAllClients(msg_send, socket); // send message to all clients
 			} catch (Exception e) {
 				System.err.println("[system] there was a problem while sending the message to all clients");
 				e.printStackTrace(System.err);
