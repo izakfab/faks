@@ -1,6 +1,5 @@
 import java.io.*;
 import java.net.*;
-import java.time.LocalDateTime;
 
 public class ChatClient extends Thread
 {
@@ -33,14 +32,8 @@ public class ChatClient extends Thread
 		// read from STDIN and send messages to the chat server
 		BufferedReader std_in = new BufferedReader(new InputStreamReader(System.in));
 		String userInput;
-		boolean nameSet = false;
 		while ((userInput = std_in.readLine()) != null) { // read a line from the console
-			if (nameSet) // preveri ali je uporabnik že nastavil svoje ime
-				this.sendMessage(userInput, out, 0); // send the message to the chat server
-			else {
-				this.sendMessage(userInput, out, 1); // pošlje sporočilo z imenom
-				nameSet = true;
-			}
+			this.sendMessage(userInput, out); // send the message to the chat server
 		}
 
 		// cleanup
@@ -50,10 +43,9 @@ public class ChatClient extends Thread
 		socket.close();
 	}
 
-	private void sendMessage(String message, DataOutputStream out, int type) {
-		String formattedMessage = type + "_" + LocalDateTime.now() + "_" + message; // sporočilo formatira v obliki Tip_Čas_Sporočilo
+	private void sendMessage(String message, DataOutputStream out) {
 		try {
-			out.writeUTF(formattedMessage); // send the message to the chat server
+			out.writeUTF(message); // send the message to the chat server
 			out.flush(); // ensure the message has been sent
 		} catch (IOException e) {
 			System.err.println("[system] could not send message");
